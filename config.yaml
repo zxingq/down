@@ -20,14 +20,15 @@ menu:
     - name: "About"
       url: "/about/"
       weight: 2
-    - name: "Categories"
-      url: "/categories/"
+    - name: "study"
+      url: "/study/"
       weight: 3
     - name: "Tags"
       url: "/tags/"
       weight: 4
     - name: "Subscribe"
       url: "/index.xml"
+      
 
 params:
   description: "If one drinks cold and warm water, he knows that all kinds of sufferings can only be overcome by himself"
