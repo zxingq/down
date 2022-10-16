@@ -1,10 +1,7 @@
 ---
 title: Home
 ---
-
-[<img src="https://simpleicons.org/icons/github.svg" style="max-width:15%;min-width:40px;float:right;" alt="Github repo" />](https://github.com/yihui/hugo-ivy)
-
-
+[<img src="https://avatars.githubusercontent.com/u/163582?v=4" style="max-width:15%;min-width:40px;float:right;" alt="Github repo" />](https://github.com/yihui/hugo-ivy)
 蛐声遮盖了月光匝地的声音
 
 这时我看向夜空
