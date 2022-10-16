@@ -23,8 +23,8 @@ menu:
     - name: "study"
       url: "/study/"
       weight: 3
-    - name: "Tags"
-      url: "/tags/"
+    - name: "life"
+      url: "/life/"
       weight: 4
     - name: "Subscribe"
       url: "/index.xml"
