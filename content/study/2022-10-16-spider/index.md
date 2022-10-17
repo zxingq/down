@@ -408,17 +408,15 @@ text 字符串  json()(对象)
 
 #### 5.正则表达式
 
-<img src="C:\Users\dell\Pictures\Screenshots\屏幕截图(51).png" alt="屏幕截图(51)" style="zoom: 67%;" />
 
-<img src="C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20220325220057299.png" alt="image-20220325220057299" style="zoom:67%;" />
+![aa](https://github.com/zxingq/down/raw/main/img/aa.png)
 
-![1652593773936](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\1652593773936.png)
+![image-20220325220057299](https://github.com/zxingq/down/raw/main/img/image-20220325220057299.png)
 
- 
+![1652593773936](https://github.com/zxingq/down/raw/main/img/1652593773936.png)
 
-<img src="C:\Users\dell\Desktop\Snipaste_2022-01-22_10-20-49.png" alt="Snipaste_2022-01-22_10-20-49" style="zoom:50%;" />
 
-![1652593926625](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\1652593926625.png)
+![1652593926625](https://github.com/zxingq/down/raw/main/img/1652593926625.png)
 
 **\d:匹配数字**
 
@@ -818,7 +816,7 @@ selenium 的使用流程：
 - 让浏览器发起一个指定url对应的请求bro.get('url')
 - 获取浏览器当前页面的的页面源码数据bro.page_source
 
-![image-20220404221727806](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20220404221727806.png)
+![image-20220404221727806](https://github.com/zxingq/down/raw/main/img/image-20220404221727806.png)
 
 设置无头浏览器：
 
@@ -927,7 +925,7 @@ Code_Pic=result.PostPic(im, 1004)
 #上面的返回的是一个字典，利用键值的特点显示出值即为验证码的数据
 result1=str.upper(Code_Pic['pic_str'])
 print(result1)
-#将本地的图片j'jin'xing
+#将本地的图片进行上传
 user=bro.find_element('id','email')
 user.send_keys('17687012990')
 sleep(1)
@@ -993,7 +991,7 @@ Scrapy引擎是整个框架的核心.它用来控制调试器、下载器、爬�
  <img src="https://img-blog.csdnimg.cn/20200321114058862.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NrNzg0MTAxNzc3,size_16,color_FFFFFF,t_70" alt="img" style="zoom: 50%;" /> 
 
 ##### 项目创建
-
+blo
 ```
 scrapy startproject 项目名
 
