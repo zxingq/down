@@ -6,4 +6,3 @@ slug: spider
 categories: []
 tags: []
 ---
-![image](https://github.com/zxingq/down/blob/main/qiu.jpg)
