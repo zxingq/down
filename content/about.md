@@ -1,9 +1,12 @@
 ---
-author: Yihui Xie
-date: "2017-08-06"
-title: About Hugo Ivy
+author: Xingqi
+date: "2022-10-17"
+title: About my Blog
 ---
-
-This Hugo theme was ported from [Ivy](https://github.com/dmulholland/ivy), a minimalist website generator built in Python. I don't have time to document this theme. You have to read the source code to understand what it can do. All I can say for now is that I love it. It is clean, minimal, and responsive.
-
-I hope you will enjoy this theme. The source code is [on Github](https://github.com/yihui/hugo-ivy). Happy hacking!
+此博客用于记录自己的一些学习笔记与一些感悟。主要做到：
+（1）记录生活，在自己的每一天上留下思考的划痕。
+（2）整理思路，固化知识，获得更多更好的想法。
+（3）分享，将自己的想法、经验与人分享。
+（4）交流、提高，通过交流产生更多的思维火花，相互提高。
+（5）交友，互相鼓励，一路同行。
+github>(https://github.com/zxingq/down)
