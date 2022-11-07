@@ -1,5 +1,5 @@
 ---
-title: 生活学习感悟
+title: know
 author: xingqi
 date: '2022-10-16'
 slug: ''
