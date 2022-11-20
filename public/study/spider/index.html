@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>spider - The website of Xingqi</title>
+    <meta property="og:title" content="spider - The website of Xingqi">
+    
+    <meta name="twitter:card" content="summary">
+
+    
+      
+    
+
+    
+      
+      <meta property="description" content="什么是爬虫
+&amp;ndash;通过编写程序 ，模拟浏览器上网，然后在其互联网上抓取数据的过程。
+[&amp;hellip;] &amp;ndash;就业
+爬虫是否合法
+&amp;ndash;在法律中是不被禁止的
+&amp;ndash;具有违法的风险
+&amp;ndash;善意爬虫 恶意爬虫
+[&amp;hellip;] &amp;ndash;爬虫干扰了被访问网站的正常运行
+&amp;ndash;爬虫抓取了收到法律保护的特定类型的数据或信息
+[&amp;hellip;] &amp;hellip;">
+      <meta property="og:description" content="什么是爬虫
+&amp;ndash;通过编写程序 ，模拟浏览器上网，然后在其互联网上抓取数据的过程。
+[&amp;hellip;] &amp;ndash;就业
+爬虫是否合法
+&amp;ndash;在法律中是不被禁止的
+&amp;ndash;具有违法的风险
+&amp;ndash;善意爬虫 恶意爬虫
+[&amp;hellip;] &amp;ndash;爬虫干扰了被访问网站的正常运行
+&amp;ndash;爬虫抓取了收到法律保护的特定类型的数据或信息
+[&amp;hellip;] &amp;hellip;">
+      
+    
+
+    
+    
+    <meta name="twitter:image" content="https://github.com/zxingq/down/raw/main/img/aa.png">
+    
+    
+
+    
+
+    
+    
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+
+  </head>
+
+  
+  <body class="study">
+    <header class="masthead">
+      <h1><a href="/">The website of Xingqi</a></h1>
+
+<p class="tagline">If one drinks cold and warm water, he knows that all kinds of sufferings can only be overcome by himself</p>
+
+      <nav class="menu">
+  <input id="menu-check" type="checkbox" hidden/>
+  <label id="menu-label" for="menu-check" class="unselectable" hidden>
+    <span class="icon close-icon">✕</span>
+    <span class="icon open-icon">☰</span>
+    <span class="text">Menu</span>
+  </label>
+  <ul>
+  
+  
+  <li><a href="/">Home</a></li>
+  
+  <li><a href="/about/">About</a></li>
+  
+  <li><a href="/study/">study</a></li>
+  
+  <li><a href="/life/">life</a></li>
+  
+  <li><a href="/index.xml">Subscribe</a></li>
+  
+  
+  </ul>
+</nav>
+
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>spider</h1>
+
+<h3>xingqi
+  /  2022-10-16</h3>
+<hr>
+
+
+      </header>
+
+
+
+
+
+<p>什么是爬虫</p>
+<p>&ndash;通过编写程序 ，模拟浏览器上网，然后在其互联网上抓取数据的过程。</p>
+<h4 id="1爬虫的价值">1.爬虫的价值：</h4>
+<pre tabindex="0"><code class="language---实际应用" data-lang="--实际应用"></code></pre><p>&ndash;就业</p>
+<p>爬虫是否合法</p>
+<p>&ndash;在法律中是不被禁止的</p>
+<p>&ndash;具有违法的风险</p>
+<p>&ndash;善意爬虫  恶意爬虫</p>
+<h6 id="爬虫的风险体现在下面2个方面">爬虫的风险体现在下面2个方面;</h6>
+<p>&ndash;爬虫干扰了被访问网站的正常运行</p>
+<p>&ndash;爬虫抓取了收到法律保护的特定类型的数据或信息</p>
+<h6 id="如何避免在编写爬虫过程中进局子">如何避免在编写爬虫过程中进局子？</h6>
+<p>&ndash;时常优化自己的程序，避免干扰被访问网站的正常运行</p>
+<p>&ndash;在使用，传播抓取数据时，审核抓取到的内容，如果发现涉及到用户的隐私</p>
+<p>商业机密等敏感内容需要及时停止爬取或传播</p>
+<h6 id="爬虫在场景中的分类">爬虫在场景中的分类</h6>
+<p>一.通用爬虫</p>
+<p>​			抓取的是系统重要组成部分。抓取的是一整张页面数据。</p>
+<p>二.聚焦爬虫</p>
+<p>​			建立在通用爬虫的基础上。抓取页面的局部内容。</p>
+<p>三.增量式爬虫</p>
+<p>​			检测网站中更新的情况。只会抓取更新出来的数据。</p>
+<h4 id="2反爬机制">2.反爬机制</h4>
+<p>​		门户网站，可以通过制定相应的策略或技术手段，防止爬虫程序进行 网站</p>
+<p>数据的爬取</p>
+<p>反反爬策略</p>
+<p>爬虫程序可以通过制定相关的策略或者技术手段，破解门户网站中具备的反爬机制。</p>
+<p>robots.txt协议</p>
+<p>​		君子协议。规定了网站上哪些数据可以被爬取，哪些数据不可以被爬取。</p>
+<p>http协议：</p>
+<p>​		&ndash;就是服务器与客户端数据交互的一种形式。</p>
+<p>常用请求头信息</p>
+<p>​		&ndash;User-Agent:请求载体的身份标识。</p>
+<p>​		&ndash;Connection：请求完毕后是断开连接还是保持连接</p>
+<p>常用响应头信息</p>
+<p>​		&ndash;Content-Type:服务器响应回客户端的数据类型</p>
+<p>https协议：</p>
+<p>​		&ndash;安全的超文本传输协议</p>
+<h6 id="heading"></h6>
+<p>requests模块</p>
+<p>​	-urllib模块</p>
+<p>​	-requests模块</p>
+<p>requests模块;</p>
+<p>python中原生的一款基于网络请求模块，功能非常强大，简单便捷，效率极高。</p>
+<p>作用:模拟浏览器发请求。</p>
+<p>如何使用（requests模块的编码流程）：</p>
+<p>​		指定url</p>
+<pre tabindex="0"><code>mport requests
+if __name__==&#34;__main__&#34;:
+    url=&#34;https://www.sogou.com/web&#34;
+</code></pre><p>​		发起请求</p>
+<pre tabindex="0"><code>kw=input(&#34;enter a word:&#34;)
+param={
+    &#34;query&#34;:kw
+}
+response=requests.get(url=url,params=param)
+</code></pre><p>​		获取响应数据</p>
+<pre tabindex="0"><code>page_text=response.text
+</code></pre><p>​		持久化存储</p>
+<pre tabindex="0"><code>fileName=kw+&#34;html&#34;#新建一个html的文件夹用于存放爬取到的数据
+with open(fileName,&#34;w&#34;,encoding=&#34;utf-8&#34;)as fp:
+    fp.write(page_text)
+</code></pre><p>安装环境：</p>
+<p>​		pip install requests</p>
+<h6 id="ua检测反反爬门户网站的服务器会检测对应请求的载体身份标识如果检测到请求的载体身份">#UA<strong>检测</strong>（反反爬）：门户网站的服务器会检测对应请求的载体身份标识，如果检测到请求的载体身份</h6>
+<p>为某款浏览器，说明该请求为正常的请求。但是，如果检测到的载体身份标识不是某一款浏览器，则表示为不正常的请求，则服务器并部给予响应。拒绝该次请求。</p>
+<p>UA——User-Agent(请求载体身份标识)</p>
+<p>查找浏览器的UA只需要在浏览器根路劲输入about:version，用户代理的一行就是User-Agent.</p>
+<h4 id="3ua伪装">3.<strong>UA伪装</strong>：</h4>
+<p>让爬出对应的请求载体身份标识为某一款浏览器</p>
+<p>实战编码;</p>
+<p>​		需求;爬取搜狗首页的页面数据</p>
+<p>为了使每一次的请求都能成功，需要进行UA伪装</p>
+<pre tabindex="0"><code>import requests
+#需求：爬取搜狗首页的数据
+if __name__==&#34;__main__&#34;:
+    #第一步：指定url
+    url=&#34;https://www.sogou.com/&#34;
+    #第二部:发起请求，使用get返回一个响应对象
+    reponse=requests.get(url=url)
+    #第三步：返回响应数据.text返回的是字符串形式的响应数据
+    page_text=reponse.text
+    print(page_text)
+    #第四步：将=数据进行持久化存储
+    with open(&#39;./sougou.html&#39;,&#39;w&#39;,encoding=&#39;utf-8&#39;)as fp:
+        fp.write(page_text)
+    print(&#39;爬取数据结束!!!&#39;)
+</code></pre><p>实战巩固</p>
+<p>​		-需求：爬取搜狗指定词条对应的搜索结果页面（简易网页采集器）</p>
+<p>UA检测，UA伪装</p>
+<pre tabindex="0"><code>import requests
+if __name__==&#34;__main__&#34;:
+    url=&#34;https://www.sogou.com/web&#34;
+    #处理url携带的参数，封装到字典中
+    kw=input(&#34;enter a word:&#34;)
+    param={
+        &#34;query&#34;:kw
+    }
+    #向url发起请求，并且相应的url是携带参数的，并且在请求过程中解决了参数
+    #获取响应数据
+    response=requests.get(url=url,params=param)
+    #持久化存储
+    page_text=response.text
+    fileName=kw+&#34;html&#34;#新建一个html的文件夹用于存放爬取到的数据
+    with open(fileName,&#34;w&#34;,encoding=&#34;utf-8&#34;)as fp:
+        fp.write(page_text)
+    #爬取成功进行提示
+    print(fileName,&#34;保存成功!!!&#34;)
+</code></pre><p>​		-需求：破解百度翻译</p>
+<p>post请求：含参数</p>
+<p>响应数据是json数据</p>
+<pre tabindex="0"><code>import requests
+import json
+if __name__==&#34;__main__&#34;:
+    #1.获取url
+    post_url=&#34;https://fanyi.baidu.com/sug&#34;
+    #2.进行UA伪装
+    headers={
+        &#34;User-Agent&#34;:&#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 Edg/96.0.1054.62&#34;
+    }
+
+    #3.post请求参数处理，同get相同
+    # 进行data数据参数处理,将它进行封装
+    word=input(&#34;enter a word&#34;)
+    data={
+        &#34;kw&#34;:word
+    }
+    #4.发送请求
+    response=requests.post(url=post_url,data=data,headers=headers)
+    #5.获取响应数据，json()方法返回的是obj(对象)，如果确定数据是json才能使用json（）
+    dic_obj=response.json()
+    #永久化存储
+    fileName=word+&#34;.json&#34;
+    fp=open(fileName,&#39;w&#39;,encoding=&#39;utf-8&#39;)
+    json.dump(dic_obj,fp=fp,ensure_ascii=False)#不要在括号前面写等号
+    print(&#34;over!!!&#34;)
+</code></pre><p>​		-需求：抓取豆瓣电影（“<a href="https://movie.douban.com/">豆瓣电影 (douban.com)</a>”）中的电影详情数据</p>
+<pre tabindex="0"><code>import requests
+import json
+if __name__==&#34;__main__&#34;:
+    #1.指定url
+    url=&#34;https://movie.douban.com/j/chart/top_list&#34;
+    #创建一个prame参数，用于封装参数
+    parame={
+        &#39;type&#39;: &#39;24&#39;,
+        &#39;interval_id&#39;: &#39;100:90&#39;,
+        &#39;action&#39;:&#39;&#39;,
+        &#39;start&#39;: &#39;20&#39;,#从库中的第几部电影开始取,可以通过改变他从而来改变不同提取信息
+        &#39;limit&#39;: &#39;20&#39;#一次性取几步电影
+    }
+    #进行UA伪装
+    header={
+        &#34;User-Agent&#34;:&#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 Edg/96.0.1054.62&#34;
+    }
+    #获取数据，如浏览器所示，采用的方法是get方法
+    response=requests.get(url=url,params=parame,headers=header)
+    #获取的数据采用json文件进行存储
+    list_data=response.json()
+
+    fp=open(&#34;./douban.json&#34;,&#39;w&#39;,encoding=&#34;utf-8&#34;)
+    json.dump(list_data,fp=fp,ensure_ascii=False)
+    print(&#34;over!!!&#34;)
+</code></pre><p>​		-需求：查询肯德基餐厅查询http://www.kfc.com.cn/kfccda/index.aspx中指定餐厅地点数据</p>
+<pre tabindex="0"><code>import requests
+import json
+if __name__==&#34;__main__&#34;:
+    #1.指定url
+    post_url=&#34;http://www.kfc.com.cn/kfccda/ashx/GetStoreList.ashx?op=keyword&#34;
+    #2.进行UA伪装
+    headers={
+    &#34;User-Agent&#34;:&#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 Edg/96.0.1054.62&#34;
+    }
+    #3.进行信息获取
+    address=input(&#34;请输入要查询哪个餐厅的城市&#34;)
+    #采用字典将输入的参数进行封装
+    data={
+        &#34;keyword&#34;:address
+    }
+    # 4.发送请求
+    param={
+        &#39;cname&#39;:&#39;&#39;,
+        &#39;pid&#39;:&#39;&#39;,
+        &#39;keyword&#39;: &#39;北京&#39;,
+        &#39;pageIndex&#39;: &#39;1&#39;,
+        &#39;pageSize&#39;: &#39;10&#39;
+    }
+    response = requests.post(url=post_url, data=data,params=param, headers=headers)
+    # 5.获取响应数据，json()方法返回的是obj(对象)，如果确定数据是json才能使用json（）
+    list_data = response.json()
+
+    # 永久化存储
+    fileName = address + &#34;.json&#34;
+    fp = open(fileName, &#39;w&#39;, encoding=&#39;utf-8&#39;)
+    json.dump(list_data, fp=fp, ensure_ascii=False)  # 不要在括号前面写等号
+    print(&#34;over!!!&#34;)
+</code></pre><p>​		-需求：爬取国家药管总局中基于中华人名共和国化妆品生产许可证等相关数据<a href="http://scxk.nmpa.gov.cn:81/xk/">化妆品生产许可信息管理系统服务平台 (nmpa.gov.cn)</a></p>
+<p>使用ctrl+F可以进行抓取搜寻</p>
+<h6 id="动态加载出来的数据有不同的url是由ajax请求得到的">动态加载出来的数据有不同的url，是由ajax请求得到的。</h6>
+<p>通过对详情url的观察发现：</p>
+<p>​		-url的域名都是一样的，只有携带的参数不一样</p>
+<p>​		-id值可以从首页对应的ajax请求得到的json串中获取</p>
+<p>​		-域名和id值拼接在一起形成一个完整的企业对应详情页的url.</p>
+<pre tabindex="0"><code>import requests
+import json
+if __name__==&#34;__main__&#34;:
+    #1.批量获取不同企业对应的id
+    url=&#34;http://scxk.nmpa.gov.cn:81/xk/itownet/portalAction.do?method=getXkzsList&#34;
+    #2.进行UA伪装
+    headers={
+        &#39;User-Agent&#39;:&#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 Edg/96.0.1054.62&#34;
+    }
+    id_list = []
+    all_data_json = []
+    #获取参数,当数据页发生变化时，获取全部数据
+    for page in range(1,6):
+        page=str(page)
+        params={
+            &#39;on&#39;: &#39;true&#39;,
+            &#39;page&#39;: &#39;page&#39;,
+            &#39;pageSize&#39;: &#39;15&#39;,
+            &#39;productName&#39;:&#39;&#39;,
+            &#39;conditionType&#39;: &#39;1&#39;,
+            &#39;applyname&#39;:&#39;&#39;,
+            &#39;applysn&#39;:&#39;&#39;
+        }
+
+        id_text=requests.post(url=url,headers=headers,params=params).json()
+        for id in id_text[&#39;list&#39;]:
+            id_list.append(id[&#39;ID&#39;]);
+    #print(id_list)
+    #获取网页的详情数据
+    post_url=&#34;http://scxk.nmpa.gov.cn:81/xk/itownet/portalAction.do?method=getXkzsById&#34;
+    #获取参数
+    for id in id_list:
+        data={
+            &#34;id&#34;:id
+        }
+        detail_data=requests.post(url=post_url,headers=headers,data=data).json()
+        all_data_json.append(detail_data)
+        #print(detail_data)
+    #永久化封装存储
+    fp=open(&#34;./换妆品数据1.html&#34;,&#39;w&#39;,encoding=&#34;utf-8&#34;)
+    json.dump(all_data_json,fp=fp,ensure_ascii=False)
+    print(&#34;over!!!!&#34;)
+</code></pre><h4 id="4数据解析">4.数据解析</h4>
+<h6 id="聚焦爬虫爬取页面中指点的页面内容">聚焦爬虫：爬取页面中指点的页面内容。</h6>
+<p>​	-编码流程：</p>
+<p>​			-指定url</p>
+<p>​			-发起请求</p>
+<p>​			-获取响应数据</p>
+<p>​			-数据解析</p>
+<p>​			-持久化存储</p>
+<p>数据解析分类：</p>
+<p>​		&ndash;正则</p>
+<p>​		 &ndash;bs4</p>
+<p>​		 &ndash;xpath</p>
+<p>数据解析原理概述：</p>
+<p>​		-解析的局部的文本内容都会在标签之间或标签对应的属性中进行存储</p>
+<p>​		-1.进行指定标签的定位</p>
+<p>​		-2。标签或者标签对应的属性中存储的数据值进行提取（解析）</p>
+<p>数据解析案列</p>
+<p>1.爬取糗事百科中糗图板块下所有的糗事图片</p>
+<p>content返回的是二进制形式的图片数据</p>
+<p>text 字符串  json()(对象)</p>
+<h4 id="5正则表达式">5.正则表达式</h4>
+<p><img src="https://github.com/zxingq/down/raw/main/img/aa.png" alt="aa"></p>
+<p><img src="https://github.com/zxingq/down/raw/main/img/image-20220325220057299.png" alt="image-20220325220057299"></p>
+<p><img src="https://github.com/zxingq/down/raw/main/img/1652593773936.png" alt="1652593773936"></p>
+<p><img src="https://github.com/zxingq/down/raw/main/img/1652593926625.png" alt="1652593926625"></p>
+<p><strong>\d:匹配数字</strong></p>
+<p><strong>\w:匹配字母，数字，下划线</strong></p>
+<p><strong>\s：匹配空白</strong></p>
+<p><strong>\b；匹配单词的边界</strong></p>
+<p>\D:匹配所有的非数字</p>
+<p>\w:匹配所有的非字母，数字，下划线</p>
+<p>\S:匹配所有非空白</p>
+<p>^:匹配开始</p>
+<p>$:匹配结束</p>
+<p>.  :匹配任意字符，除了换行符</p>
+<table>
+<thead>
+<tr>
+<th>*</th>
+<th>匹配前面的子表达式零次或多次。要匹配 * 字符，请使用 *。</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.</td>
+<td>匹配除换行符 \n 之外的任何单字符。要匹配 . ，请使用 . 。</td>
+</tr>
+</tbody>
+</table>
+<p>？:可选字符，可以出现也可以不出现，</p>
+<table>
+<thead>
+<tr>
+<th>?</th>
+<th>匹配前面的子表达式零次或一次，或指明一个非贪婪限定符。要匹配 ? 字符，请使用 ?。</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>{}：表示数字的个数</p>
+<p>()：用于分组</p>
+<p>re.sub(&lsquo;a&rsquo;,&lsquo;A&rsquo;,&lsquo;abcdacd&rsquo;)：在第三个中查找到a用A来替换</p>
+<p>bs4进行数据解析</p>
+<p>​	-数据解析的原理：</p>
+<p>​	-1.标签定位</p>
+<p>​	-2.提取标签，标签属性中存储数据值</p>
+<p>-bs4数据解析的原理：</p>
+<p>​	-1.实列化一个BeautifulSoup对象，并且将页面源码数据加载到对象中</p>
+<p>​	-2.通过调用BeautifulSoup对象中相关的属性或者方法进行标签定位和数据提取</p>
+<p>-环境安装</p>
+<p>​		-pip install bs4</p>
+<p>​		-pip install lxml</p>
+<p>-如何实列化BeautifulSoup对象</p>
+<p>​	-from bs4 import BeautifulSoup</p>
+<p>​	-对象实例化：</p>
+<p>​		-1.将本地的html文档中的数据加载到对象中</p>
+<p>​					fp=open(&rsquo;./test.html&rsquo;,&lsquo;r&rsquo;,encoding=&lsquo;utf-8&rsquo;)</p>
+<p>​					soup=BeautifulSoup(fp,&rsquo;lxml&rsquo;)</p>
+<p>​		-2.将互联网上的页面数据加载到对象中</p>
+<p>​				page_text=response.text</p>
+<p>​				soup=BeautifulSoup(page_text,&rsquo;lxml&rsquo;)</p>
+<p>​		-提供用于数据解析的方法和属性：</p>
+<p>​			-soup.tagName:返回文档中第一次出现的tagName对应的标签</p>
+<p>​			-soup.find():</p>
+<p>​				-find(&rsquo;tagName&rsquo;):等于soup.div</p>
+<p>​				-属性定位</p>
+<p>​					-soup.find(&lsquo;div&rsquo;,class_/id/attr=&lsquo;song&rsquo;)</p>
+<p>​				-soup.find_all(&rsquo;tagName&rsquo;):返回符合要求的所有标签（列表）</p>
+<p>​			-select:</p>
+<p>​					-select(&lsquo;某种选择器(id,cloass,标签&hellip;选择器)&rsquo;)，返回的是一个列表</p>
+<p>​					-层级选择器</p>
+<p>​							-soup.select(&rsquo;.tang&gt;ul&gt;li&gt;a&rsquo;):&gt;表示的是一个层级</p>
+<p>​							-oup.select(&rsquo;.tang&gt;ul  a&rsquo;):空格表示的是多个层级</p>
+<pre><code>-获取标签中的文本数据：
+</code></pre>
+<p>​			-soup.a.text/string/get_text()</p>
+<p>​			-text/get_text():可以获取某一标签中所有的文本内容</p>
+<p>​			-string;只能获取该标签下面的直系文本内容</p>
+<p>​	-获取标签中的属性值：</p>
+<p>​			-soup.a[&lsquo;herf&rsquo; ]</p>
+<h6 id="实例爬取诗词名句中三国演义的标题和详情页内容"><strong>实例：爬取诗词名句中三国演义的标题和详情页内容</strong></h6>
+<pre tabindex="0"><code>import requests
+from bs4 import BeautifulSoup
+#需求：爬取三国演义小说所有章节标题和章节内容
+if __name__==&#34;__main__&#34;:
+    #指定章节标题页的url
+    url=&#34;http://www.shicimingju.com/book/sanguoyanyi.html&#34;
+    headers={
+        &#34;User-Agent&#34;:&#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.62&#34;
+
+    }
+    page_text=requests.get(url=url,headers=headers).text
+    #在章节中解析出标题和详情页数据的url
+    #实例化BeautifulSoup对象，需要将页面详情源码数据加载到该对象中
+    soup=BeautifulSoup(page_text,&#39;lxml&#39;)
+    #先创立一个文档用于持久化存储详情页的内容
+    fp=open(&#39;./sanguo.txt&#39;,&#39;w&#39;,encoding=&#39;utf-8&#39;)
+    #解析章节标题和详情页的url
+    li_list=soup.select(&#39;book-mulu&gt;ul&gt;li&#39;)
+    for li in li_list:
+        title=li.a.string
+        #解析出每一个详情页对应的url
+        detail_url=&#39;http://www.shicimingju.com&#39;+li.a[&#39;href&#39;]
+        #对详情页发起请求，获取详情页的数据内容,内容以文本形式展现出来
+        detail_page_text=requests.get(url=detail_url,headers=headers).text
+        #解析出详情页中相关的章节内容，需要创建新的实例化对象
+        detail_soup=detail_page_text(detail_page_text,&#39;lxml&#39;)
+        #由检查源码可知详情页的数据存在与指定的p标签中
+        div_tag=detail_soup.find(&#39;div&#39;,class_ =&#39;chapter_content&#39;)
+        #解析到了章节内容，进行持久化存储
+        content=div_tag.text
+        fp.write(title+&#39;:&#39;+content+&#39;\n&#39;)
+        print(title,&#39;爬取成功&#39;)
+</code></pre><p>​		 xpath解析：最常用并且最便捷高效的一种解析方式。通用性</p>
+<p>​				-xpath解析原理：</p>
+<p>​					-1.实例化一个etree的对象，且需要将被解析的页面源码数据加载到该对象中</p>
+<p>​					-2.调用etree对象中的xpath方法结合着xpath表达式实现标签的定位和内容的捕获。</p>
+<p>-环境的安装;</p>
+<p>​       -pip install lxml</p>
+<p>-如何实例化一个entree对象:from lxml import entree</p>
+<p>​			-1.将本地的html文档中的源码数据加载到entree对象中：</p>
+<p>​				entree.parse(filePath)</p>
+<p>​			-2.可以将从互联网上获取的源码数据加载到该对象中</p>
+<p>​				entree.HTML(&lsquo;page_text&rsquo;)</p>
+<p>​			-xpath(&lsquo;xpath表达式&rsquo;)</p>
+<p>-xpath表达式：</p>
+<p>​		-/:表示的是一个层级。表示从根节点开始。</p>
+<p>​		-//表示的是多个层级，可以可以表示从任意位置开始定位。</p>
+<p>​		-属性定位：//div[@class=&lsquo;song&rsquo;] tag[@attrName=&lsquo;attrValue&rsquo;]</p>
+<p>​		-索引定位：///div[@class=&lsquo;song&rsquo;]/p[3]索引是从1开始的。这里表示的就是第三个p标签里面的内容</p>
+<p>​		-取文本：</p>
+<p>​			-/text()获取的是标签中直系的文本内容</p>
+<p>​			-//text()标签中非直系的文本内容（所有的文本内容）</p>
+<p>​			-取属性：</p>
+<p>​					/@attrName          ==&gt;img/src img/@src</p>
+<p>案例：解析下载图片<a href="https://pic.netbian.com/4kdongman/">4K动漫壁纸_高清4K动漫图片_彼岸图网 (netbian.com)</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> requests
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> lxml <span style="color:#f92672">import</span> etree
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span>  os
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__<span style="color:#f92672">==</span><span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#获取指定的url</span>
+</span></span><span style="display:flex;"><span>    url<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://pic.netbian.com/4kdongman/&#34;</span>
+</span></span><span style="display:flex;"><span>    headers<span style="color:#f92672">=</span>{
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;User-Agent&#34;</span>:<span style="color:#e6db74">&#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.62&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    response<span style="color:#f92672">=</span>requests<span style="color:#f92672">.</span>get(url<span style="color:#f92672">=</span>url,headers<span style="color:#f92672">=</span>headers)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#手动设置响应数据编码格式</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#response.encoding=&#39;utf-8&#39;</span>
+</span></span><span style="display:flex;"><span>    page_text<span style="color:#f92672">=</span>response<span style="color:#f92672">.</span>text
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#数据解析，src属性和alt属性</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#将从互联网上获取的源码数据加载到该对象中</span>
+</span></span><span style="display:flex;"><span>    tree<span style="color:#f92672">=</span>etree<span style="color:#f92672">.</span>HTML(page_text)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#要获取图片找到图片对应的位置</span>
+</span></span><span style="display:flex;"><span>    li_list<span style="color:#f92672">=</span>tree<span style="color:#f92672">.</span>xpath(<span style="color:#e6db74">&#39;//div[@class=&#34;slist&#34;]/ul/li&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>exists(<span style="color:#e6db74">&#39;./Picture&#39;</span>):
+</span></span><span style="display:flex;"><span>        os<span style="color:#f92672">.</span>mkdir(<span style="color:#e6db74">&#39;./Picture&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#采用循环去获取到每一张图片的src和alt</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> li <span style="color:#f92672">in</span> li_list:
+</span></span><span style="display:flex;"><span>        image_src<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;https://pic.netbian.com&#39;</span><span style="color:#f92672">+</span>li<span style="color:#f92672">.</span>xpath(<span style="color:#e6db74">&#39;./a/img/@src&#39;</span>)[<span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>        image_name<span style="color:#f92672">=</span>li<span style="color:#f92672">.</span>xpath(<span style="color:#e6db74">&#39;./a/img/@alt&#39;</span>)[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">+</span><span style="color:#e6db74">&#39;.jpg&#39;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">#通用用于处理中文乱码问题</span>
+</span></span><span style="display:flex;"><span>        image_name<span style="color:#f92672">=</span>image_name<span style="color:#f92672">.</span>encode(<span style="color:#e6db74">&#39;iso-8859-1&#39;</span>)<span style="color:#f92672">.</span>decode(<span style="color:#e6db74">&#39;gbk&#39;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">#print(image_name,image_src)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">#请求图片，进行持久化存储</span>
+</span></span><span style="display:flex;"><span>        img_data<span style="color:#f92672">=</span>requests<span style="color:#f92672">.</span>get(url<span style="color:#f92672">=</span>image_src,headers<span style="color:#f92672">=</span>headers)<span style="color:#f92672">.</span>content
+</span></span><span style="display:flex;"><span>        img_path<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Picture/&#39;</span><span style="color:#f92672">+</span>image_name<span style="color:#75715e">#拼成图片的存储文件路径</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">with</span> open(img_path,<span style="color:#e6db74">&#39;wb&#39;</span>) <span style="color:#66d9ef">as</span> fp:
+</span></span><span style="display:flex;"><span>            fp<span style="color:#f92672">.</span>write(img_data)
+</span></span><span style="display:flex;"><span>            print(image_name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;下载成功&#39;</span>)
+</span></span></code></pre></div><p>爬取站长素材中免费的简历模板</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> requests
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> lxml <span style="color:#f92672">import</span> etree
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span>  os
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__<span style="color:#f92672">==</span><span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#获取指定的url</span>
+</span></span><span style="display:flex;"><span>    url<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://pic.netbian.com/4kdongman/&#34;</span>
+</span></span><span style="display:flex;"><span>    headers<span style="color:#f92672">=</span>{
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;User-Agent&#34;</span>:<span style="color:#e6db74">&#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.62&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    }}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#创建一个文件夹</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>exists(<span style="color:#e6db74">&#39;./resumelibs&#39;</span>):  <span style="color:#75715e"># 如果不存在</span>
+</span></span><span style="display:flex;"><span>    os<span style="color:#f92672">.</span>mkdir(<span style="color:#e6db74">&#39;./resumelibs&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://aspx.sc.chinaz.com/query.aspx?keyword=</span><span style="color:#e6db74">%E</span><span style="color:#e6db74">5</span><span style="color:#e6db74">%85%</span><span style="color:#e6db74">8D</span><span style="color:#e6db74">%E</span><span style="color:#e6db74">8%B4%B9&amp;classID=864&#39;</span>
+</span></span><span style="display:flex;"><span>page_text <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(url<span style="color:#f92672">=</span>url,headers<span style="color:#f92672">=</span>headers)<span style="color:#f92672">.</span>text
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>tree <span style="color:#f92672">=</span> etree<span style="color:#f92672">.</span>HTML(page_text)
+</span></span><span style="display:flex;"><span>div_list <span style="color:#f92672">=</span> tree<span style="color:#f92672">.</span>xpath(<span style="color:#e6db74">&#39;//div[@id=&#34;container&#34;]/div&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> div <span style="color:#f92672">in</span> div_list:
+</span></span><span style="display:flex;"><span>    resume_src <span style="color:#f92672">=</span> div<span style="color:#f92672">.</span>xpath(<span style="color:#e6db74">&#39;./a/@href&#39;</span>)[<span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>    resume_name <span style="color:#f92672">=</span> div<span style="color:#f92672">.</span>xpath(<span style="color:#e6db74">&#39;./a/img/@alt&#39;</span>)[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">+</span><span style="color:#e6db74">&#39;.zip&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#对每个简历页面发起请求</span>
+</span></span><span style="display:flex;"><span>    detail_text <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(url<span style="color:#f92672">=</span>resume_src, headers<span style="color:#f92672">=</span>headers)<span style="color:#f92672">.</span>text
+</span></span><span style="display:flex;"><span>    tree1 <span style="color:#f92672">=</span> etree<span style="color:#f92672">.</span>HTML(detail_text)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#解析出下载链接</span>
+</span></span><span style="display:flex;"><span>    download_src <span style="color:#f92672">=</span> tree1<span style="color:#f92672">.</span>xpath(<span style="color:#e6db74">&#39;//div[@class=&#34;clearfix mt20 downlist&#34;]/ul/li[1]/a/@href&#39;</span>)[<span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#对下载链接发起请求</span>
+</span></span><span style="display:flex;"><span>    down_load_resume <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(url<span style="color:#f92672">=</span>download_src, headers<span style="color:#f92672">=</span>headers)<span style="color:#f92672">.</span>content
+</span></span><span style="display:flex;"><span>    down_load_path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;resumelibs/&#39;</span> <span style="color:#f92672">+</span> resume_name
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> open( down_load_path,<span style="color:#e6db74">&#39;wb&#39;</span>) <span style="color:#66d9ef">as</span> fp:
+</span></span><span style="display:flex;"><span>         fp<span style="color:#f92672">.</span>write(down_load_resume)
+</span></span><span style="display:flex;"><span>         print(resume_name,<span style="color:#e6db74">&#39;下载成功！！！！&#39;</span>)
+</span></span></code></pre></div><h4 id="6模拟登陆">6.模拟登陆</h4>
+<p>验证码，识别验证码图片中的数据用于模拟登录操作</p>
+<p>模拟登录</p>
+<ul>
+<li>-点击登录按钮之后发出一个post请求</li>
+<li>每次发起请求，验证码都会发生变化</li>
+</ul>
+<p>编码流程：</p>
+<p>1.验证码识别，获取验证码图片文字数据</p>
+<p>2.对post发起请求</p>
+<p>3.对相应数据进行永久化存储</p>
+<h5 id="cookie">cookie</h5>
+<p><strong>在模拟登录成功之后，http/https协议特征：无状态</strong>要保证模拟登录时候不在需要登录，利用post请求直接实现自动登录。</p>
+<ul>
+<li>发起的第二次基于个人主页页面的请求的时候，服务器并不知道此请求是基于登陆状态下的请求</li>
+<li>cookie:用来让服务器记录客户端相关的状态</li>
+</ul>
+<p>可以在compile文件中寻找到cookie(不推荐)&mdash;&ndash;手动处理，通过抓包工具获取包中的cookie值，将cookie进行封装</p>
+<p>&ndash;自动处理：</p>
+<p>cookie来源于哪里？</p>
+<ul>
+<li>
+<p>&ndash;模拟登录post请求后，由客户端创建</p>
+</li>
+<li>
+<p>session会话对象</p>
+<ul>
+<li>可以进行请求的发送</li>
+<li>如果请求过程中产生了cookie则cookie将会被自动存储/携带在该session对象中</li>
+</ul>
+</li>
+<li>
+<p>创建一个session对象：session=requests.Session()</p>
+</li>
+<li>
+<p>使用session对象进行模拟登录post请求的发送(cookie会被存储在session对象中)</p>
+</li>
+<li>
+<p>session对象对个人主页对应的get请求进行发送(携带cookie)</p>
+</li>
+</ul>
+<h4 id="7代理">7.代理</h4>
+<ul>
+<li>代理服务器</li>
+</ul>
+<p>作用：</p>
+<ul>
+<li>突破自生IP访问的权限，隐藏自生真是ip</li>
+</ul>
+<p>相关的代理网站</p>
+<ul>
+<li>快代理</li>
+<li>西祠代理</li>
+<li><a href="https://www.goubanjia.com">www.goubanjia.com</a></li>
+<li><a href="http://ip.yqie.com/proxyhttps/">http://ip.yqie.com/proxyhttps/</a></li>
+</ul>
+<p>代理IP的类型</p>
+<ul>
+<li>
+<p>http类型</p>
+</li>
+<li>
+<p>https类型</p>
+<p>代理IP透明度</p>
+<ul>
+<li>​    透明：服务器知道此次请求知道使用代理，也知道真实的本机IP</li>
+<li>匿名：知道使用了代理，但是不知道真实ip</li>
+<li>高匿：不知道使用了代理，更不知道真实的IP</li>
+</ul>
+</li>
+</ul>
+<h4 id="异步爬虫">异步爬虫</h4>
+<p>同步爬虫时可以发现在进行get请求时往往会发生阻塞</p>
+<ul>
+<li>
+<p>目的：</p>
+<ul>
+<li>爬虫时进行高性能数据爬取</li>
+</ul>
+</li>
+<li>
+<p>方法</p>
+<ul>
+<li>多线程，多进程</li>
+<li>好处：可以为相关阻塞的操作单独开启线程或进程 ，阻塞操作就可以异步执行</li>
+<li>弊端：无法无限制的开启多线程或多进程</li>
+</ul>
+<p>线程池，进程池</p>
+<ul>
+<li>好处：可以降低系统的开销</li>
+<li>弊端：池中线程或进程的数量是有限制的</li>
+</ul>
+</li>
+</ul>
+<h4 id="heading-1"></h4>
+<h4 id="selenium">selenium</h4>
+<p>selenium模块的基本使用</p>
+<p>&mdash;便捷的获取到网站中动态加载出来的数据</p>
+<p>&mdash;便捷实现模拟登录</p>
+<p>什么是selenium模块？</p>
+<ul>
+<li>基于浏览器自动化的一个模块</li>
+</ul>
+<p>selenium 的使用流程：</p>
+<ul>
+<li>
+<p>环境安装</p>
+</li>
+<li>
+<p>下载一个浏览器的驱动程序</p>
+<ul>
+<li>下载路径：http://chromedriver.storage.googleapis.com/index.html</li>
+</ul>
+</li>
+<li>
+<p>实例化一个浏览器对象</p>
+</li>
+<li>
+<p>让浏览器发起一个指定url对应的请求bro.get(&lsquo;url&rsquo;)</p>
+</li>
+<li>
+<p>获取浏览器当前页面的的页面源码数据bro.page_source</p>
+</li>
+</ul>
+<p><img src="https://github.com/zxingq/down/raw/main/img/image-20220404221727806.png" alt="image-20220404221727806"></p>
+<p>设置无头浏览器：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> selenium.webdriver.chrome.options <span style="color:#f92672">import</span> Options
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>chrom_options<span style="color:#f92672">=</span>Options()
+</span></span><span style="display:flex;"><span>chrom_options<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;--headless&#39;</span>)
+</span></span><span style="display:flex;"><span>chrom_options<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;--disable-gpu&#39;</span>)
+</span></span><span style="display:flex;"><span>bro<span style="color:#f92672">=</span>webdriver<span style="color:#f92672">.</span>Chrome(options<span style="color:#f92672">=</span>chrom_options)
+</span></span></code></pre></div><p>实现规避检测：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#实现规避检测</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> selenium.webdriver <span style="color:#f92672">import</span> ChromeOptions
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>option<span style="color:#f92672">=</span>ChromeOptions()
+</span></span><span style="display:flex;"><span>option<span style="color:#f92672">.</span>add_experimental_option(<span style="color:#e6db74">&#39;excludeSwitches&#39;</span>,[<span style="color:#e6db74">&#39;enable-automation&#39;</span>])
+</span></span><span style="display:flex;"><span>bro<span style="color:#f92672">=</span>webdriver<span style="color:#f92672">.</span>Chrome(chrome_options<span style="color:#f92672">=</span>chrom_options,options<span style="color:#f92672">=</span>option)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>selenium案例<span style="color:#960050;background-color:#1e0010">：</span>古诗文登录
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> selenium <span style="color:#f92672">import</span> webdriver
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> time <span style="color:#f92672">import</span> sleep
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> requests
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> lxml <span style="color:#f92672">import</span> etree
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> hashlib <span style="color:#f92672">import</span> md5
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> PIL <span style="color:#f92672">import</span> Image
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Chaojiying_Client</span>(object):
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, username, password, soft_id):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>username <span style="color:#f92672">=</span> username
+</span></span><span style="display:flex;"><span>        password <span style="color:#f92672">=</span>  password<span style="color:#f92672">.</span>encode(<span style="color:#e6db74">&#39;utf8&#39;</span>)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>password <span style="color:#f92672">=</span> md5(password)<span style="color:#f92672">.</span>hexdigest()
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>soft_id <span style="color:#f92672">=</span> soft_id
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>base_params <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;user&#39;</span>: self<span style="color:#f92672">.</span>username,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;pass2&#39;</span>: self<span style="color:#f92672">.</span>password,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;softid&#39;</span>: self<span style="color:#f92672">.</span>soft_id,
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>headers <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;Connection&#39;</span>: <span style="color:#e6db74">&#39;Keep-Alive&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;User-Agent&#39;</span>: <span style="color:#e6db74">&#39;Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)&#39;</span>,
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">PostPic</span>(self, im, codetype):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        im: 图片字节
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        codetype: 题目类型 参考 http://www.chaojiying.com/price.html
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        params <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;codetype&#39;</span>: codetype,
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        params<span style="color:#f92672">.</span>update(self<span style="color:#f92672">.</span>base_params)
+</span></span><span style="display:flex;"><span>        files <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;userfile&#39;</span>: (<span style="color:#e6db74">&#39;ccc.jpg&#39;</span>, im)}
+</span></span><span style="display:flex;"><span>        r <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>post(<span style="color:#e6db74">&#39;http://upload.chaojiying.net/Upload/Processing.php&#39;</span>, data<span style="color:#f92672">=</span>params, files<span style="color:#f92672">=</span>files, headers<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>headers)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> r<span style="color:#f92672">.</span>json()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">ReportError</span>(self, im_id):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        im_id:报错题目的图片ID
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        params <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;id&#39;</span>: im_id,
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        params<span style="color:#f92672">.</span>update(self<span style="color:#f92672">.</span>base_params)
+</span></span><span style="display:flex;"><span>        r <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>post(<span style="color:#e6db74">&#39;http://upload.chaojiying.net/Upload/ReportError.php&#39;</span>, data<span style="color:#f92672">=</span>params, headers<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>headers)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> r<span style="color:#f92672">.</span>json()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>bro<span style="color:#f92672">=</span>webdriver<span style="color:#f92672">.</span>Chrome()
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#将浏览器设为全屏</span>
+</span></span><span style="display:flex;"><span>bro<span style="color:#f92672">.</span>maximize_window()
+</span></span><span style="display:flex;"><span>bro<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;https://so.gushiwen.cn/user/login.aspx?from=http://so.gushiwen.cn/user/collect.aspx&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#对当前页面进行截图</span>
+</span></span><span style="display:flex;"><span>bro<span style="color:#f92672">.</span>save_screenshot(<span style="color:#e6db74">&#39;aa.png&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#对当前页面的验证码图片进行xpath定位</span>
+</span></span><span style="display:flex;"><span>img_code<span style="color:#f92672">=</span>bro<span style="color:#f92672">.</span>find_element(<span style="color:#e6db74">&#39;xpath&#39;</span>,<span style="color:#e6db74">&#39;//img[@id=&#34;imgCode&#34;]&#39;</span>)
+</span></span><span style="display:flex;"><span>print(img_code)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#图片坐标</span>
+</span></span><span style="display:flex;"><span>locations <span style="color:#f92672">=</span> img_code<span style="color:#f92672">.</span>location
+</span></span><span style="display:flex;"><span>print(locations)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#图片大小</span>
+</span></span><span style="display:flex;"><span>sizes <span style="color:#f92672">=</span> img_code<span style="color:#f92672">.</span>size
+</span></span><span style="display:flex;"><span>print(sizes)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 构造指数的位置</span>
+</span></span><span style="display:flex;"><span>rangle <span style="color:#f92672">=</span> (int(locations[<span style="color:#e6db74">&#39;x&#39;</span>]),int(locations[<span style="color:#e6db74">&#39;y&#39;</span>]),int(locations[<span style="color:#e6db74">&#39;x&#39;</span>] <span style="color:#f92672">+</span> sizes[<span style="color:#e6db74">&#39;width&#39;</span>]),int(locations[<span style="color:#e6db74">&#39;y&#39;</span>] <span style="color:#f92672">+</span> sizes[<span style="color:#e6db74">&#39;height&#39;</span>]))
+</span></span><span style="display:flex;"><span>print(rangle)
+</span></span><span style="display:flex;"><span>a<span style="color:#f92672">=</span>Image<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#39;aa.png&#39;</span>)
+</span></span><span style="display:flex;"><span>farm<span style="color:#f92672">=</span>a<span style="color:#f92672">.</span>crop(rangle)
+</span></span><span style="display:flex;"><span>farm<span style="color:#f92672">.</span>save(<span style="color:#e6db74">&#39;verification.png&#39;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;图片截取成功!&#34;</span>)
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> Chaojiying_Client(<span style="color:#e6db74">&#39;17687012990&#39;</span>, <span style="color:#e6db74">&#39;zxq119712&#39;</span>, <span style="color:#e6db74">&#39;930964&#39;</span>)  <span style="color:#75715e"># 用户中心&gt;&gt;软件ID 生成一个替换 96001</span>
+</span></span><span style="display:flex;"><span>im <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;./verification.png&#39;</span>, <span style="color:#e6db74">&#39;rb&#39;</span>)<span style="color:#f92672">.</span>read()  <span style="color:#75715e"># 本地图片文件路径 来替换 a.jpg 有时WIN系统须要//</span>
+</span></span><span style="display:flex;"><span>Code_Pic<span style="color:#f92672">=</span>result<span style="color:#f92672">.</span>PostPic(im, <span style="color:#ae81ff">1004</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#上面的返回的是一个字典，利用键值的特点显示出值即为验证码的数据</span>
+</span></span><span style="display:flex;"><span>result1<span style="color:#f92672">=</span>str<span style="color:#f92672">.</span>upper(Code_Pic[<span style="color:#e6db74">&#39;pic_str&#39;</span>])
+</span></span><span style="display:flex;"><span>print(result1)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#将本地的图片进行上传</span>
+</span></span><span style="display:flex;"><span>user<span style="color:#f92672">=</span>bro<span style="color:#f92672">.</span>find_element(<span style="color:#e6db74">&#39;id&#39;</span>,<span style="color:#e6db74">&#39;email&#39;</span>)
+</span></span><span style="display:flex;"><span>user<span style="color:#f92672">.</span>send_keys(<span style="color:#e6db74">&#39;17687012990&#39;</span>)
+</span></span><span style="display:flex;"><span>sleep(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>pwd<span style="color:#f92672">=</span>bro<span style="color:#f92672">.</span>find_element(<span style="color:#e6db74">&#39;id&#39;</span>,<span style="color:#e6db74">&#39;pwd&#39;</span>)
+</span></span><span style="display:flex;"><span>pwd<span style="color:#f92672">.</span>send_keys(<span style="color:#e6db74">&#39;zxq119712&#39;</span>)
+</span></span><span style="display:flex;"><span>sleep(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>ver<span style="color:#f92672">=</span>bro<span style="color:#f92672">.</span>find_element(<span style="color:#e6db74">&#39;id&#39;</span>,<span style="color:#e6db74">&#39;code&#39;</span>)
+</span></span><span style="display:flex;"><span>ver<span style="color:#f92672">.</span>send_keys(result1)
+</span></span><span style="display:flex;"><span>sleep(<span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>but<span style="color:#f92672">=</span>bro<span style="color:#f92672">.</span>find_element(<span style="color:#e6db74">&#39;id&#39;</span>,<span style="color:#e6db74">&#39;denglu&#39;</span>)
+</span></span><span style="display:flex;"><span>but<span style="color:#f92672">.</span>click()
+</span></span></code></pre></div><h3 id="scrapy框架">scrapy框架</h3>
+<p>&ndash;什么是框架：</p>
+<ul>
+<li>
+<p>就是集成了很多功能并且具有很强通用性的项目模板</p>
+</li>
+<li>
+<p>scrapy</p>
+<ul>
+<li>
+<p>爬虫封装好的一个明星框架。功能：高性能的持久化存储，异步的数据下载，高性能的数据解析</p>
+</li>
+<li>
+<p>创建一个工程：scapy startproject xxxPro(工程名)</p>
+</li>
+<li>
+<p>cd  xxxProscrapy</p>
+</li>
+<li>
+<p>在spiders子目录中创建一个文件夹</p>
+<ul>
+<li>-scrapy genspider spiderName <a href="https://www.xxx.com">www.xxx.com</a></li>
+</ul>
+</li>
+<li>
+<p>执行工程：</p>
+<ul>
+<li>scrapy crawl spiderName</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="joincontent将列表转换为字符串"><strong>&rsquo;&rsquo;.join(content)将列表转换为字符串</strong></h5>
+<h5 id="五大基本组成">五大基本组成</h5>
+<p>Scrapy框架主要由五大组件组成，它们分别是调度器(Scheduler)、下载器(Downloader)、爬虫（Spider）和实体管道(Item Pipeline)、Scrapy引擎(Scrapy Engine)。下面我们分别介绍各个组件的作用。</p>
+<p>(1)、调度器(Scheduler):</p>
+<p>调度器，说白了把它假设成为一个URL（抓取网页的网址或者说是链接）的优先队列，由它来决定下一个要抓取的网址是 什么，同时去除重复的网址（不做无用功）。用户可以自己的需求定制调度器。</p>
+<p>(2)、下载器(Downloader):</p>
+<p>下载器，是所有组件中负担最大的，它用于高速地下载网络上的资源。Scrapy的下载器代码不会太复杂，但效率高，主要的原因是Scrapy下载器是建立在twisted这个高效的异步模型上的(其实整个框架都在建立在这个模型上的)。</p>
+<p>(3)、 爬虫（Spider）:</p>
+<p>爬虫，是用户最关心的部份。用户定制自己的爬虫(通过定制正则表达式等语法)，用于从特定的网页中提取自己需要的信息，即所谓的实体(Item)。 用户也可以从中提取出链接,让Scrapy继续抓取下一个页面。</p>
+<p>(4)、 实体管道(Item Pipeline):</p>
+<p>实体管道，用于处理爬虫(spider)提取的实体。主要的功能是持久化实体、验证实体的有效性、清除不需要的信息。</p>
+<p>(5)、Scrapy引擎(Scrapy Engine):</p>
+<p>Scrapy引擎是整个框架的核心.它用来控制调试器、下载器、爬虫。实际上，引擎相当于计算机的CPU,它控制着整个流程。</p>
+<p>整体框架图</p>
+ <img src="https://img-blog.csdnimg.cn/20200321114058862.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NrNzg0MTAxNzc3,size_16,color_FFFFFF,t_70" alt="img" style="zoom: 50%;" /> 
+<h5 id="项目创建">项目创建</h5>
+<p>blo</p>
+<pre tabindex="0"><code>scrapy startproject 项目名
+
+scrapy genspider 爬虫名 域名
+执行工程
+scrapy crawl 爬虫名
+</code></pre>
+
+
+  <footer>
+  
+<nav class="post-nav">
+  <span class="nav-prev">&larr; <a href="/study/2022-11-20-java/"></a></span>
+  <span class="nav-next"><a href="/study/python/"> python</a> &rarr;</span>
+</nav>
+
+
+
+
+
+<script src="//yihui.org/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<script async src="//yihui.org/js/center-img.js"></script>
+
+  
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/tex.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+  
+  <hr>
+  <div class="copyright">© [Xinqi]  @  2022 | <a href="https://github.com/zxingq">Github</a></div>
+  
+  </footer>
+  </article>
+  
+  </body>
+</html>
+
